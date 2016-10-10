@@ -8,7 +8,6 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 import com.google.common.collect.Lists;
 
-@SuppressWarnings("restriction")
 @XmlRootElement
 public class AreaItem {
 	@XmlAttribute

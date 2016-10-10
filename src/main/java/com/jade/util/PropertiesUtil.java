@@ -2,10 +2,16 @@ package com.jade.util;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.URL;
 import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
+
+import com.google.common.base.Throwables;
+import com.google.common.collect.Maps;
+import com.google.common.io.Resources;
 
 /**   
  * 配置文件操作
@@ -18,7 +24,23 @@ public class PropertiesUtil {
 	
 	/**  
 	* 获取配置文件信息
-	* @param popName
+	* @param propName
+	* @return Map<String, String>
+	*/
+	public static Map<String, String> readProperties(String propName) {
+        Properties properties = new Properties();
+        URL resource = Resources.getResource(propName);
+        try {
+            properties.load(new InputStreamReader(resource.openStream(), "UTF-8"));
+        } catch (Exception e) {
+            throw Throwables.propagate(e);
+        }
+        return Maps.fromProperties(properties);
+    }
+	
+	/**  
+	* 获取配置文件信息
+	* @param propName
 	* @return Map<String, String>
 	*/
 	public static Map<String, String> propertiesToMap(String propName) {

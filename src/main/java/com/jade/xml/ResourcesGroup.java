@@ -7,7 +7,6 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 import com.google.common.collect.Lists;
 
-@SuppressWarnings("restriction")
 @XmlRootElement(name = "resources")
 public class ResourcesGroup {
 	@XmlElement(name = "array")
