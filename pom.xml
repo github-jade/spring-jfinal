@@ -60,7 +60,7 @@
 	<kxml2.version>2.1.7</kxml2.version>
 	<!-- commons api -->
 	<commons-lang3.version>3.1</commons-lang3.version>
-	<commons-fileupload.version>1.3.2</commons-fileupload.version>
+	<commons-fileupload.version>1.3.3</commons-fileupload.version>
 	<commons-beanutils.version>1.8.3</commons-beanutils.version>
 	<commons-attributes-api.version>2.1</commons-attributes-api.version>
 	<commons-betwixt.version>0.8</commons-betwixt.version>
